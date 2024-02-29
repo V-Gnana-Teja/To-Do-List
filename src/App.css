@@ -60,10 +60,12 @@
 
 .button-nav {
   text-align: center; 
-  padding: 63px;
+  padding: 0px;
   position: relative; 
   z-index: 1001;
   margin: 0;
+  font-size: 17px;
+
 }
 
 .button-nav ul {
@@ -73,77 +75,34 @@
 
 .button-nav li {
   display: inline-block; 
-   }
+  position: relative; 
+  
+}
 
+.button-nav li button {
+  padding: 15px 302.5px; 
+  background-color: #d8d8d8; 
+  color: rgb(19, 18, 18); 
+  border: none; 
+  border-radius: 0px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  font-size: 16px; 
+  
+  margin-top: 42px;
+  width: 100%;
+  
+  
+}
 
+.button-nav li:hover {
+  border-bottom: 2px solid orange; 
+}
 
-  .button-nav li button {
-    position:inherit;
-    padding: 10px 235px; 
-    padding-top: 10px;
-    margin: -2.2px;
-    background-color: #d8d8d8; 
-    color: rgb(19, 18, 18); 
-    border: none; 
-    border-radius: 0px; 
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-    font-size: 32px; 
-    width: 100;
+.button-nav li button:focus {
+  outline: none; 
+}
 
-    margin-top: 21px;
-    
-  }
-
- .button-nav li button:hover {
-    background-color: #d8d8d8; }
-
-    .button-nav li button::after {
-      content: ""; 
-      position: absolute; 
-      left: 0;
-      right: 0px;
-      bottom: 0; 
-      height: 8px; 
-      background-color: orange; 
-      transition: opacity 0.3s; 
-      opacity: 0;
-    }
-    
-    .button-nav li button:hover::after {
-      opacity: 1;}
-
-
-
-/* 
-      .button-box {
-        width: 220px;
-        margin: 35px auto;
-        position: relative;
-        border-radius: 0px;
-        background: #fff
-      }
-      
-      .toggle-btn {
-        padding: 10px 40px;
-        cursor: pointer;
-        background: transparent;
-        border: 0;
-        outline: none;
-        position: relative;
-        text-align: center;
-      }
-      
-      #btn {
-        left: 0;
-        top: 0;
-        position: absolute;
-        width: 110px;
-        height: 100%;
-        background: #e67e22;
-        border-radius: 30px;
-        transition: .5s;
-      } */
 
   
 
@@ -154,16 +113,17 @@
         height: 1vh;
         margin: 0;
         border-color: #ccc;;
+        margin-top: 100px;
       }
       
       .search-container input[type="text"] {
         padding: 10px;
         border: 1px solid #ccc;
         background-color: #ccc;
-
+       
         border-radius: 50px;
         font-size: 16px;
-        width: 400px;
+        width: 450px;
       }
       
       .search-container button[type="submit"] {
@@ -185,12 +145,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #dfd9d9;
+        background-color: #eceaea;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 85px;
-        width: 36%;
+        margin-top: 120px;
+        width: 39%;
         font-size: 32;
         font-weight: 500;
       }
@@ -208,9 +168,11 @@
       
       .todo-body ul li {
         margin-bottom: 20px;
-        margin-top: 20px;
+        margin-top: -20px;
         border-bottom: 1px solid black;
         font-size: 32;
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
       
       
