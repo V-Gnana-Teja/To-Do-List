@@ -37,143 +37,215 @@
   }
 }
 
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; 
-  position: fixed; 
-  top: 0; 
-  background-color: #f0f0f0; 
-  z-index: 1000; }
-
-.centered > div {
-  margin: 0; 
-  padding: 0; 
-}
-
-.centered img {
-  max-width: 100%;
-  max-height: 100%;
-  
-}
-
-.button-nav {
-  text-align: center; 
-  padding: 0px;
-  position: relative; 
-  z-index: 1001;
-  margin: 0;
-  font-size: 17px;
-
-}
-
-.button-nav ul {
-  padding: 0;
-  margin: 0px; 
-}
-
-.button-nav li {
-  display: inline-block; 
-  position: relative; 
-  
-}
-
-.button-nav li button {
-  padding: 15px 302.5px; 
-  background-color: #d8d8d8; 
-  color: rgb(19, 18, 18); 
-  border: none; 
-  border-radius: 0px; 
-  cursor: pointer; 
-  transition: background-color 0.3s; 
-  font-size: 16px; 
-  
-  margin-top: 42px;
-  width: 100%;
-  
-  
-}
-
-.button-nav li:hover {
-  border-bottom: 2px solid orange; 
-}
-
-.button-nav li button:focus {
-  outline: none; 
-}
 
 
-  
 
-      .search-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 1vh;
-        margin: 0;
-        border-color: #ccc;;
-        margin-top: 100px;
-      }
-      
-      .search-container input[type="text"] {
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: #ccc;
-       
-        border-radius: 50px;
-        font-size: 16px;
-        width: 450px;
-      }
-      
-      .search-container button[type="submit"] {
-        padding: 10px 20px;
-        background-color: #5ba3f0;
-        color: white;
-        border: none;
-        border-radius: 50px;
-        margin-left: 10px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-      
-      .search-container button[type="submit"]:hover {
-        background-color: #0056b3;
-      }
-      .todo-card {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #eceaea;
+      header {
+
+        background-color: #ebe7e7; 
+        color: #fff;
         padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 120px;
-        width: 39%;
-        font-size: 32;
-        font-weight: 500;
-      }
-
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        z-index: 9999; 
+    }
     
-      
-      .todo-body {
-        padding: 20px;
+    .logo {
+
+        width: 150px; 
+        height: auto;
+    }
+
+      .button-container {
+
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: -30px; 
+      box-sizing: border-box;
+      position: absolute;
+      top: 150px;
+      left: 0;
+      margin-top: -70px;
       }
+
+
+  .button {
+
+      width: 50%;
+      text-align: center;
+      cursor: pointer;
+
+      border-bottom: 3px solid transparent; 
+      transition: border-bottom-color 0.3s ease; 
+      background-color:  #c7c5c5; 
+      font-size: 32px;
+      margin-top: 0%;
+  }
+
+  .button:hover {
+
+      border-bottom-color: orange; 
+  }
+
+  .search-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1vh;
+    margin: 0;
+    border-color: #ccc;;
+    margin-top: 150px;
+  }
+  
+  .search-container input[type="text"] {
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+   
+    border-radius: 50px;
+    font-size: 16px;
+    width: 450px;
+  }
+  
+  .search-container button[type="submit"] {
+
+    padding: 10px 20px;
+    background-color: #5ba3f0;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .search-container button[type="submit"]:hover {
+
+    background-color: #0056b3;
+  }
+
+
+  .Personal.todo-card,
+
+  .professional.todo-card {
+
+      background-color: #eceaea;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin-top:   80px;
+      width: 39%;
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+  }
+
+  .Personal.todo-card ul,
+
+  .professional.todo-card ul {
+
+      list-style-type: none;
+      padding: 0;
+
+  }
+
+  .Personal.todo-card ul li,
+
+  .professional.todo-card ul li {
+
+      margin-bottom: 10px;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+  }
+
+  .Personal .todo-card ul li input [type="checkbox"] ,
+
+  .professional .todo-card ul li input[type="checkbox"]  {
+      margin-right: 10px;
+      border-radius: 50%;
+   
       
-      .todo-body ul {
-        list-style-type: none;
-        padding: 0;
-      }
+  }
+
+  .Personal.todo-card ul li label ,
+
+  .professional.todo-card ul li label {
+      flex-grow: 1;
+      margin: 0;
+      cursor: pointer;
+  }
+
+  .Personal.todo-card button[type="submit"] ,
+
+  .professional.todo-card button[type="submit"] {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-weight: 300;
+      color: rgb(187, 140, 52);
       
-      .todo-body ul li {
-        margin-bottom: 20px;
-        margin-top: -20px;
-        border-bottom: 1px solid black;
-        font-size: 32;
-        padding-top: 5px;
-        padding-bottom: 5px;
-      }
-      
-      
-     
+  }
+
+  .todo-card label.checked {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(187, 140, 52);
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #eceaea;
+    border-color: rgb(187, 140, 52);}
+
+ 
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgb(187, 140, 52);
+  outline: none;
+  cursor: pointer;
+  position: relative; 
+}
+
+input[type="checkbox"]::before {
+  content: ''; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 6px; 
+  height: 6px; 
+  border-bottom: 2px solid rgb(187, 140, 52);
+  border-right: 2px solid rgb(187, 140, 52);
+  opacity: 0; 
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1; 
+}
+

@@ -1,10 +1,10 @@
 
 
-import logo from './logo.svg';
+
 
 import './App.css';
 
-import {todo} from './components/todo'
+
 
 
 function App() {
@@ -14,5 +14,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
