@@ -1,4 +1,4 @@
-.App {
+ .App {
   text-align: center;
 }
 
@@ -42,7 +42,7 @@
 
       header {
 
-        background-color: #ebe7e7; 
+        background-color: #D9D9D9; 
         color: #fff;
         padding: 20px;
         text-align: center;
@@ -81,16 +81,17 @@
 
       border-bottom: 3px solid transparent; 
       transition: border-bottom-color 0.3s ease; 
-      background-color:  #c7c5c5; 
+      background-color:  #F1ECE6; 
       font-size: 32px;
       margin-top: 0%;
   }
 
   .button:hover {
 
-      border-bottom-color: orange; 
+      border-bottom-color: #D98326; 
   }
 
+  
   .search-container {
 
     display: flex;
@@ -98,19 +99,20 @@
     justify-content: center;
     height: 1vh;
     margin: 0;
-    border-color: #ccc;;
+    border-color: #F1ECE6;;
     margin-top: 150px;
+    position: relative;
   }
   
   .search-container input[type="text"] {
 
     padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #ccc;
+    border: 1px solid #F1ECE6;
+    background-color: #F1ECE6;
    
     border-radius: 50px;
     font-size: 16px;
-    width: 450px;
+    width: 470px;
   }
   
   .search-container button[type="submit"] {
@@ -135,17 +137,18 @@
 
   .professional.todo-card {
 
-      background-color: #eceaea;
+      background-color: #F1ECE6;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      
       margin-top:   80px;
       width: 39%;
       font-size: 16px;
       position: absolute;
-      top: 50%;
+      top: 25%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
+      
 
   }
 
@@ -164,7 +167,7 @@
 
       margin-bottom: 10px;
       padding: 5px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid rgb(140, 189, 245);
       display: flex;
       align-items: center;
   }
@@ -193,7 +196,7 @@
       background-color: transparent;
       cursor: pointer;
       font-weight: 300;
-      color: rgb(187, 140, 52);
+      color: #D98326;
       
   }
 
@@ -202,6 +205,7 @@
     color: rgba(0, 0, 0, 0.5);
   }
   
+  
   input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -209,14 +213,14 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid rgb(187, 140, 52);
+    border: 2px solid #D98326;
     outline: none;
     cursor: pointer;
 }
 
 input[type="checkbox"]:checked {
-    background-color: #eceaea;
-    border-color: rgb(187, 140, 52);}
+    background-color: #F1ECE6;
+    border-color: #D98326;}
 
  
 input[type="checkbox"] {
@@ -226,7 +230,7 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid rgb(187, 140, 52);
+  border: 2px solid #D98326;
   outline: none;
   cursor: pointer;
   position: relative; 
@@ -240,8 +244,8 @@ input[type="checkbox"]::before {
   transform: translate(-50%, -50%); 
   width: 6px; 
   height: 6px; 
-  border-bottom: 2px solid rgb(187, 140, 52);
-  border-right: 2px solid rgb(187, 140, 52);
+  border-bottom: 2px solid #D98326;
+  border-right: 2px solid #D98326;
   opacity: 0; 
 }
 
@@ -249,3 +253,4 @@ input[type="checkbox"]:checked::before {
   opacity: 1; 
 }
 
+ 
