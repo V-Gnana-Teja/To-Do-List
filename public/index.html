@@ -27,7 +27,8 @@
     <title>React App</title>
 
    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script> 
 
 
   </head>
@@ -106,189 +107,240 @@
 
  <script>
 
-  
-  function handleButtonClick(type) {
-    var personalCard = document.querySelector('.Personal.todo-card');
-    var professionalCard = document.querySelector('.professional.todo-card');
+function handleButtonClick(type) {
 
-    if (type === 'personal') {
-      personalCard.style.display = 'block';
-      professionalCard.style.display = 'none';
-    } else if (type === 'professional') {
-      personalCard.style.display = 'none';
-      professionalCard.style.display = 'block';
-    }
-    updateClearCompletedVisibility();
-  }
+     var personalCard = document.querySelector('.Personal.todo-card');
 
-  function addTaskToList() {
-    var taskInput = document.getElementById("taskInput").value;
+     var professionalCard = document.querySelector('.professional.todo-card');
 
-    if (taskInput.trim() !== "") {
-      var tasksList;
-
-      if (document.querySelector('.Personal.todo-card').style.display === 'block') {
-        tasksList = document.getElementById("PersonalTasks");
-      } else if (document.querySelector('.professional.todo-card').style.display === 'block') {
-        tasksList = document.getElementById("professionalTasks");
-      } else {
-        alert("Please select a card.");
-        return;
-      }
-
-      var li = document.createElement("li");
-
-      li.innerHTML = `
-        <input type="checkbox" onclick="toggleStrikeThrough(this)">
-        <label>${taskInput}</label>
-        <button type="submit" onclick="deleteTask(this)">
-          <svg style="vertical-align: colorP:#B30B04;middle; margin-left: 220px;" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.5" clip-path="url(#clip0_138_143)">
-              <path d="M7.99999 25.3333C7.99999 26.8 9.19999 28 10.6667 28H21.3333C22.8 28 24 26.8 24 25.3333V9.33333H7.99999V25.3333ZM10.6667 12H21.3333V25.3333H10.6667V12ZM20.6667 5.33333L19.3333 4H12.6667L11.3333 5.33333H6.66666V8H25.3333V5.33333H20.6667Z" fill="#B30B04"/>
-            </g>
-            <defs>
-              <clipPath id="clip0_138_143">
-                <rect width="32" height="32" fill="white"/>
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
-      `;
-
-      tasksList.appendChild(li);
-
-      document.getElementById("taskInput").value = ""; 
-
-      updateClearCompletedVisibility();
-    }  
-    else {
-
-      alert("Please enter a task!");
-    }
-  }
-
-  function toggleStrikeThrough(checkbox) {
-
-    var label = checkbox.nextElementSibling;
-
-    if (checkbox.checked) {
-      label.style.textDecoration = "line-through";
-    } 
-    
-    else {
-      label.style.textDecoration = "none";
-    }
-  }
-
-  function deleteTask(button) {
-
-    var listItem = button.parentElement;
-
-    listItem.remove(); 
-    updateClearCompletedVisibility();
-  }
-
-  function clearCompletedTasks() {
-    var checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
-
-    checkedItems.forEach(function(item) {
-
-      var listItem = item.parentElement;
-      listItem.remove();
-    });
-
-    updateClearCompletedVisibility();
-  }
-
-  function updateClearCompletedVisibility() {
-
-    var personalTasks = document.getElementById("PersonalTasks");
-
-    var professionalTasks = document.getElementById("professionalTasks");
-
-    var personalClearCompleted = document.querySelector('.Personal.todo-card button[type="button"]');
-
-    var professionalClearCompleted = document.querySelector('.professional.todo-card button[type="button"]');
-    
-    if (personalTasks && personalTasks.children.length > 0) {
-
-      personalClearCompleted.style.display = 'block';
-    } 
-    
-    else {
-      personalClearCompleted.style.display = 'none';
-    }
-
-    if (professionalTasks && professionalTasks.children.length > 0) {
-
-      professionalClearCompleted.style.display = 'block';
-    } 
-    
-    
-    else {
-      professionalClearCompleted.style.display = 'none';
-    }
-  }
-
-  function addTaskToList() {
-
-    var taskInput = document.getElementById("taskInput").value;
-
-    if (taskInput.trim() !== "") {
-        var tasksList;
-
-        if (document.querySelector('.Personal.todo-card').style.display === 'block') {
-            tasksList = document.getElementById("PersonalTasks");
+        if (type === 'personal') {
+            personalCard.style.display = 'block';
+            professionalCard.style.display = 'none';
         } 
         
-        else if (document.querySelector('.professional.todo-card').style.display === 'block') {
-            tasksList = document.getElementById("professionalTasks");
+        else if (type === 'professional') {
+            personalCard.style.display = 'none';
+            professionalCard.style.display = 'block';
+        }
+        updateClearCompletedVisibility();
+    }
+
+      function addTaskToList() {
+
+        var taskInput = document.getElementById("taskInput").value;
+
+        if (taskInput.trim() !== "") {
+            var tasksList;
+
+            if (document.querySelector('.Personal.todo-card').style.display === 'block') {
+                tasksList = document.getElementById("PersonalTasks");
+            } 
+            
+            else if (document.querySelector('.professional.todo-card').style.display === 'block') {
+                tasksList = document.getElementById("professionalTasks");
+            } 
+            
+            else {
+             
+              alert("Please select a card.");
+                return;
+            }
+
+            var li = document.createElement("li");
+
+            li.innerHTML = `
+                <input type="checkbox" onclick="toggleStrikeThrough(this)">
+
+                <label>${taskInput}</label>
+
+                <button type="submit" onclick="deleteTask(this)">
+
+                    <svg style="vertical-align: colorP:#B30B04;middle; margin-left: 220px;" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5" clip-path="url(#clip0_138_143)">
+                            <path d="M7.99999 25.3333C7.99999 26.8 9.19999 28 10.6667 28H21.3333C22.8 28 24 26.8 24 25.3333V9.33333H7.99999V25.3333ZM10.6667 12H21.3333V25.3333H10.6667V12ZM20.6667 5.33333L19.3333 4H12.6667L11.3333 5.33333H6.66666V8H25.3333V5.33333H20.6667Z" fill="#B30B04"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_138_143">
+                                <rect width="32" height="32" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            `;
+
+            tasksList.appendChild(li);
+
+            document.getElementById("taskInput").value = "";
+
+            updateClearCompletedVisibility();
+
+            Sortable.create(tasksList);
+
+            saveTasksToStorage(); 
         } 
         
         else {
-            alert("Please select a card.");
-            return;
+            alert("Please enter a task!");
         }
+    }
 
-        var li = document.createElement("li");
+      function toggleStrikeThrough(checkbox) {
 
-        li.innerHTML = `
-            <input type="checkbox" onclick="toggleStrikeThrough(this)">
+        var label = checkbox.nextElementSibling;
 
-            <label>${taskInput}</label>
+        if (checkbox.checked) {
+            label.style.textDecoration = "line-through";
+        } 
+        
+        else {
+            label.style.textDecoration = "none";
+        }
+    }
 
-            <button type="submit" onclick="deleteTask(this)">
-                <svg style="vertical-align: colorP:#B30B04;middle; margin-left: 220px;" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.5" clip-path="url(#clip0_138_143)">
-                        <path d="M7.99999 25.3333C7.99999 26.8 9.19999 28 10.6667 28H21.3333C22.8 28 24 26.8 24 25.3333V9.33333H7.99999V25.3333ZM10.6667 12H21.3333V25.3333H10.6667V12ZM20.6667 5.33333L19.3333 4H12.6667L11.3333 5.33333H6.66666V8H25.3333V5.33333H20.6667Z" fill="#B30B04"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_138_143">
-                            <rect width="32" height="32" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-            </button>
-        `;
+     function deleteTask(button) {
 
-        tasksList.appendChild(li);
+        var listItem = button.parentElement;
 
-        document.getElementById("taskInput").value = ""; 
+        listItem.remove();
+        updateClearCompletedVisibility();
+        saveTasksToStorage(); 
+    }
+  
+    function clearCompletedTasks() {
+
+        var checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
+
+        checkedItems.forEach(function(item) {
+
+            var listItem = item.parentElement;
+            listItem.remove();
+
+        });
 
         updateClearCompletedVisibility();
-        
-        Sortable.create(tasksList);
+        saveTasksToStorage(); 
+    }
+
+    function updateClearCompletedVisibility() {
+
+          var personalTasks = document.getElementById("PersonalTasks");
+
+        var professionalTasks = document.getElementById("professionalTasks");
+
+         var personalClearCompleted = document.querySelector('.Personal.todo-card button[type="button"]');
+
+            var professionalClearCompleted = document.querySelector('.professional.todo-card button[type="button"]');
+
+          personalClearCompleted.style.display = personalTasks && personalTasks.children.length > 0 ? 'block' : 'none';
+
+         professionalClearCompleted.style.display = professionalTasks && professionalTasks.children.length > 0 ? 'block' : 'none';
+
+      
+    }
+
+      function saveTasksToStorage() {
+
+         saveTasks('PersonalTasks');
+
+         saveTasks('professionalTasks');
+    }
+
+
+      function saveTasks(taskListId) {
+
+         var tasksList = document.getElementById(taskListId);
+ 
+        localStorage.setItem(taskListId, tasksList.innerHTML);
+
+     }
+
+      window.addEventListener('load', function () {
+
+        loadTasksFromStorage();
+    });
+
+      function loadTasksFromStorage() {
+
+        loadTasks('PersonalTasks');
+
+        loadTasks('professionalTasks');
+
+    }
+    
+
+      function loadTasks(taskListId) {
+
+        var tasks = localStorage.getItem(taskListId);
+
+        if (tasks) {
+
+            var tasksList = document.getElementById(taskListId);
+            tasksList.innerHTML = tasks;
+
+            updateClearCompletedVisibility();
+            Sortable.create(tasksList); 
+        }
+    }
+
+    window.addEventListener('load', function () {
+
+      loadTasksFromStorage();
+
+      updateClearCompletedVisibility(); 
+
+});
+
+   function handleButtonClick(type) {
+
+    var personalCard = document.querySelector('.Personal.todo-card');
+
+
+    var professionalCard = document.querySelector('.professional.todo-card');
+
+    if (type === 'personal') {
+        personalCard.style.display = 'block';
+
+        professionalCard.style.display = 'none';
+
+        localStorage.setItem('selectedCategory', 'personal');
+
     } 
     
-    else {
-        alert("Please enter a task!");
+    else if (type === 'professional') {
+
+        personalCard.style.display = 'none';
+
+        professionalCard.style.display = 'block';
+
+        localStorage.setItem('selectedCategory', 'professional');
+
     }
-}
+
+    updateClearCompletedVisibility();
+    
+  }
 
 
+      window.addEventListener('load', function () {
 
-  
+    var selectedCategory = localStorage.getItem('selectedCategory');
+
+    if (selectedCategory === 'personal') {
+        handleButtonClick('personal');
+    } 
+    
+    else if (selectedCategory === 'professional') {
+        handleButtonClick('professional');
+    }
+
+    loadTasksFromStorage();
+
+    updateClearCompletedVisibility();
+
+});
+
 </script>
+
 
 
 
