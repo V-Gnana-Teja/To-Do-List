@@ -1,4 +1,4 @@
- .App {
+App {
   text-align: center;
 }
 
@@ -12,6 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -85,7 +86,7 @@
 
   .button:hover {
 
-      border-bottom-color: #D98326; 
+      border-bottom-color: #D98329; 
   }
 
   
@@ -193,7 +194,7 @@
       background-color: transparent;
       cursor: pointer;
       font-weight: 300;
-      color: #D98326;
+      color: #D98329;
       
   }
 
@@ -212,7 +213,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #D98326;
+    border: 2px solid #D98329;
     outline: none;
     cursor: pointer;
 
@@ -221,7 +222,7 @@
 input[type="checkbox"]:checked {
 
     background-color: #F1ECE6;
-    border-color: #D98326;
+    border-color: #D98329;
   
   }
 
@@ -235,7 +236,7 @@ input[type="checkbox"] {
 
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #D98326;
+  border: 2px solid #D98329;
   outline: none;
   cursor: pointer;
   position: relative; 
@@ -252,8 +253,8 @@ input[type="checkbox"] {
   width: 6px; 
   height: 6px; 
 
-  border-bottom: 2px solid #D98326;
-  border-right: 2px solid #D98326;
+  border-bottom: 2px solid #D98329;
+  border-right: 2px solid #D98329;
   opacity: 0; 
 
 }
